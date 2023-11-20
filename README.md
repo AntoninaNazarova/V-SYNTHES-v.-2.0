@@ -1,7 +1,7 @@
 # V-SYNTHES-2.-_CapSelect
 CapSelect Algorithm for V_SYNTHES 2.*
   Overview
-CapSelect is a geometry-modular algorithm essential for automating the selection of productive MEL fragments in V_SYNTHES 2.*. It constructs a series of non-overlapping spheres, ensuring no overlap with the pocket or ligand, thereby predicting the potential location of a fully enumerated ligand upon docking.
+    CapSelect is a geometry-modular algorithm essential for automating the selection of productive MEL fragments in V_SYNTHES 2.*. It constructs a series of non-overlapping spheres, ensuring no overlap with the pocket or ligand, thereby predicting the potential location of a fully enumerated ligand upon docking.
 
   Key Outputs
   1.  Spheres: Reports the number of possible non-overlapping spheres.
@@ -10,7 +10,7 @@ CapSelect is a geometry-modular algorithm essential for automating the selection
   4.  CapScore: A relative score assessing space availability for MEL fragment growth.
 
   Versions and File Generation
-Two versions available: C++ (CapSelect.cpp) and Python (CapSelect.py).
+    Two versions available: C++ (CapSelect.cpp) and Python (CapSelect.py).
 Input files (.sdf) are auto-generated using icm_generate_CapSelect_files.icm.
 Output file frags_for_enum.sdf is generated through icm_CapSelect_to_frags_for_enum.icm.
 
