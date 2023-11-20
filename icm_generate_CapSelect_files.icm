@@ -1,0 +1,65 @@
+########################################################################
+##                                                                    ##
+## This script generates the input files necessary for the execution  ##
+## of the automated fragment selection using the CapSelect algorithm  ##
+## as part of VSYTHES2.0                                              ##
+##                                                                    ##
+## Version 02082022  -  Antonina L. Nazarova   nazarova@usc.edu       ## 
+##                                                                    ##
+########################################################################
+
+call _startup
+
+#####
+## Setting Up Project Path & Variables 
+#####
+project_path=Path()+"run/"
+read sys find $project_path/*_rec.ob
+rec_ob=Split(s_out,"\n")[1]
+temp_name=Split(rec_ob,"/")
+temp_ProjectName=temp_name[Nof(temp_name)]
+ProjectName=temp_ProjectName[1:Length(temp_ProjectName)-7]
+
+
+global read object rec_ob
+dockUpdateGlobals ProjectName -1
+if( yes & currentDockProj.l_readyReceptor ) dockDisplayMol ProjectName 0, -1
+dockInit project_path + ProjectName ""  # needs ProjectName.dtb file!
+dockDisplayMol ProjectName 0, -1
+rec_obj = "a_"+ProjectName+"_rec."
+set object rec_obj
+
+#####
+## Write protein sdf
+#####
+
+## 4D Maps
+if (Exist(a_ stack)) then 
+	load conf a_ 1
+	write mol Select(a_// & Box( $ProjectName.R_boxDim 5. )on) Path()+"CapSelect_files/"+"protein1.sdf" delete
+	load conf a_ 2
+	write mol Select(a_// & Box( $ProjectName.R_boxDim 5. )on) Path()+"CapSelect_files/"+"protein2.sdf" delete
+else
+## 3D Maps
+	write mol Select(a_// & Box( $ProjectName.R_boxDim 5. )on) Path()+"CapSelect_files/"+"protein1.sdf" delete
+endif
+
+
+#####
+## Export frags as fragments.sdf from ProjectName*.icb file (generated using the hitlist script) 
+#####
+
+processing_path=Path()+"/run/processing_files/"
+
+read sys find $processing_path/$ProjectName*.icb
+frags_icb=Split(s_out,"\n")[1]
+openFile frags_icb
+tmp_Name=Split(frags_icb,"/")
+tmp_FileName=tmp_Name[Nof(tmp_Name)]
+icbFileName=tmp_FileName[1:Length(tmp_FileName)-4]
+
+write table mol compress $icbFileName Path()+"CapSelect_files/fragments.sdf" delete
+
+print("DONE GENERATING INPUT FILES FOR CAPSELECT")
+
+quit
