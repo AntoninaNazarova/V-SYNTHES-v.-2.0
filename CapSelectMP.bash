@@ -6,14 +6,14 @@
 ## of the necessary input files (ICM), the execution of the           ##
 ## algorithm, and the generation of frags_for_enum.sdf for enumeration##
 ##                                                                    ##
-## Version 02082022  -  Antonina L. Nazarova   nazarova@usc.edu       ## 
+## Version 11112023  -  Antonina L. Nazarova   nazarova@usc.edu       ## 
 ##                                                                    ##
 ########################################################################
 
 # Make CapSelect files directory - All input and output files of CapSelect are stored here
 mkdir CapSelect_files
 
-# Execute icm_generate_CapSelect_files.icm using ICM (icm-3.9-2b)
+# Execute icm_generate_CapSelect_files.icm using ICM (icm-3.9-2b) - ICMHOME folder might eventually be updated down the road
 /usr/icm-3.9-2b/icm64 icm_generate_CapSelect_files.icm > output_icm_generate_CapSelect_files.log
 
 # Fallback options if no inputs are passed along with the bash script
@@ -46,7 +46,7 @@ fi
 sed -i -e 's/\r$//' $sdfFrag
 
 nof_frags=$(grep -c \$\$\$\$ $sdfFrag)
-chunksize=$(((nof_frags+nproc-1)/nproc))
+chunksize=$(((($nof_frags+(($nproc-1))))/$nproc))
 
 echo "Number of Processors: $nproc"
 echo "Number of Fragments: $nof_frags"
@@ -91,5 +91,14 @@ echo "Please wait ..."
 wait
 echo "NOTE: All threads are completed"
 
-find . -name CapSelect.sdf |
+find . -name CapSelect.sdf | sort -t_ -k2,2n | xargs cat > CapSelect_files/CapSelectMP.sdf
+
+echo "Clean up temporary files..."
+#rm -r CapSelect_files/tmp
+
+/usr/icm-3.9-2b/icm64 icm_CapSelect_to_frags_for_enum.icm > output_icm_CapSelect_to_frags_for_enum.log
+
+echo "DONE"
+
+
 
