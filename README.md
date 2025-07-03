@@ -1,7 +1,7 @@
 # V-SYNTHES-2.-_CapSelect
-CapSelect Algorithm for V_SYNTHES 2.*
+CapSelect Algorithm for V_SYNTHES 2.0
   Overview
-    !CapSelect is a geometry-modular algorithm essential for automating the selection of productive MEL fragments in V_SYNTHES 2.*. It constructs a series of non-overlapping spheres, ensuring no overlap with the pocket or ligand, thereby predicting the potential location of a fully enumerated ligand upon docking.
+CapSelect is a geometry-modular algorithm essential for automating the selection of productive MEL fragments in V_SYNTHES 2.*. It constructs a series of non-overlapping spheres, ensuring no overlap with the pocket or ligand, thereby predicting the potential location of a fully enumerated ligand upon docking.
 
   Key Outputs
   1.  Spheres: Reports the number of possible non-overlapping spheres.
