@@ -13,25 +13,32 @@ CapSelect Algorithm for V-SYNTHES 2.0
 
 CapSelect is a physics-based algorithm that automates the identification and selection of optimal MEL fragments for enumeration within the V-SYNTHES 2.0 framework. It generates non-overlapping spherical regions around potential fragment-growth points, ensuring minimal steric interference with binding pocket residues and existing ligands, thus facilitating accurate enumeration predictions.
 Key Outputs
+
 •	Spheres: Number of viable non-overlapping spherical regions.
 •	MaxMin: Maximum minimum distance from sphere surfaces to pocket residues.
 •	Distance: Distances between the cap-associated sphere and centroids of other spheres.
 •	CapScore: A metric evaluating available spatial volume for fragment growth.
+
 Versions and File Generation
 Two versions of CapSelect are available:
+
 •	C++ version (CapSelect.cpp)
 •	Python version (CapSelect.py)
+
 Input files (.sdf format) are automatically generated via the script icm_generate_CapSelect_files.icm. The output file (frags_for_enum.sdf) is generated using icm_CapSelect_to_frags_for_enum.icm.
+
 Execution Workflow
 The workflow is managed by the bash script CapSelectMP.sh, which performs:
 1.	Input file generation and parsing.
 2.	Fragment evaluation via CapSelect (.py or .cpp).
 3.	Output formatting, leveraging multi-core CPU parallelization for performance optimization.
+
 Running CapSelect in Python
 1.	Confirm Python installation (command: python --version).
 2.	Place the following files into your project root directory: CapSelect.py, CapSelectMP.sh, icm_generate_CapSelect_files.icm, icm_CapSelect_to_frags_for_enum.icm.
 3.	Execute the command: ./CapSelectMP.sh (specify number of cores using -c N, default is 16).
 4.	The resulting file frags_for_enum.sdf will appear in root()/run/processing_file/.
+
 Running CapSelect in C++
 1.	A pre-compiled executable (CapSelect) optimized with -O2 is provided. For custom compilation, use: g++ -O2 -o CapSelect CapSelect.cpp.
 2.	Place CapSelect, CapSelectMP.sh, icm_generate_CapSelect_files.icm, and icm_CapSelect_to_frags_for_enum.icm into your V-SYNTHES project directory.
