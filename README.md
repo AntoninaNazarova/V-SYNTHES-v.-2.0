@@ -4,14 +4,14 @@ This directory contains scripts necessary for executing the V-SYNTHES 2.0 workfl
 
 Execution of V-SYNTHES scripts and subsequent docking analyses require an ICM-Pro+VLS license, available from MolSoft (https://www.molsoft.com/products.html). Scripts included in this directory were validated using ICM-Pro+VLS version 3.9-4a running on Ubuntu Linux version 18.04.
 
-Example MEL fragment files for two-component and three-component projects are provided within subdirectories under REAL_36B_files/, specifically REAL_022025_MEL_2comp.csv, REAL_022025_MEL_2comp.molt, REAL_022025_MEL_3comp.csv, and REAL_022025_MEL_3comp.molt. Complete versions of these datasets can be requested directly from Enamine LLC. Reaction libraries and synthon datasets essential for both 2- and 3-component reactions are included as REAL_36B_files/REAL_36B_022025_reactions.icb and REAL_36B_022025_syntons.molt.
+Example MEL fragment files for two-component and three-component projects are provided within subdirectories under files/, specifically REAL_022025_MEL_2comp.csv, REAL_022025_MEL_2comp.molt, REAL_022025_MEL_3comp.csv, and REAL_022025_MEL_3comp.molt. Complete versions of these datasets can be requested directly from Enamine LLC. Reaction libraries and synthon datasets essential for both 2- and 3-component reactions are included as files/REAL_36B_022025_reactions.icb and REAL_36B_022025_syntons.molt.
 
 To apply the V-SYNTHES 2.0 workflow using the provided examples, follow the detailed instructions outlined in Figure 2 of the manuscript, specifically described in Procedure 1 (V-SYNTHES 2.0 Automated Run). For statistical evaluations of docking poses and conformational analyses of enumerated hits, refer to Procedure 2 (RMSD Assessment between MEL fragments and Corresponding Enumerated Molecules).
 
-Additionally, V-SYNTHES 2.0 introduces an automated algorithm, CapSelect, designed to optimize the previously manual step 2b from V-SYNTHES 1.0:
+In addition to previously developed scripts (docking_launcher.icm, icm_enumerate_REAL_frags.icm, icm_load_hits_enamine_REAL.icm, and indexer.icm, originally written by Dr. Arman A. Sadybekov for V-SYNTHES 1.0), V-SYNTHES 2.0 includes a newly developed automated algorithm, CapSelect. CapSelect is specifically designed to optimize and automate the step (2b) that was performed manually in the original V-SYNTHES 1.0 workflow:
 CapSelect Algorithm for V-SYNTHES 2.0
 
-CapSelect is an innovative geometry-based algorithm that automates the identification and selection of optimal MEL fragments for enumeration within the V-SYNTHES 2.0 framework. It generates non-overlapping spherical regions around potential fragment-growth points, ensuring minimal steric interference with binding pocket residues and existing ligands, thus facilitating accurate enumeration predictions.
+CapSelect is a physics-based algorithm that automates the identification and selection of optimal MEL fragments for enumeration within the V-SYNTHES 2.0 framework. It generates non-overlapping spherical regions around potential fragment-growth points, ensuring minimal steric interference with binding pocket residues and existing ligands, thus facilitating accurate enumeration predictions.
 Key Outputs
 •	Spheres: Number of viable non-overlapping spherical regions.
 •	MaxMin: Maximum minimum distance from sphere surfaces to pocket residues.
