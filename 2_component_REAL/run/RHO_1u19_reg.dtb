@@ -1,0 +1,187 @@
+#>I RHO_1u19_reg.CN_I_active
+  0
+#>R RHO_1u19_reg.CN_R_maxDist
+  0.
+#>R RHO_1u19_reg.CN_R_minDist
+  0.
+#>R RHO_1u19_reg.CN_R_weight
+  0.
+#>S RHO_1u19_reg.CN_S_atom
+
+#>S RHO_1u19_reg.CN_S_dest
+
+#>S RHO_1u19_reg.CN_S_type
+
+#>R RHO_1u19_reg.R_4DscoreOffsets
+  0.
+#>R RHO_1u19_reg.R_boxDim
+  44.5347
+  0.210664
+  -20.6214
+  72.7143
+  18.5175
+  3.44539
+#>R RHO_1u19_reg.R_ligInitPosition
+  58.7891
+  9.09628
+  -9.894
+  1.
+  0.
+  0.
+  0.
+  1.
+  0.
+#>R RHO_1u19_reg.R_scoreWeights
+  0.
+  1.
+  0.6
+  0.66
+  2.53
+  0.67
+  0.75
+  0.6
+  0.
+#>i RHO_1u19_reg.i_dbSize
+ 1
+#>i RHO_1u19_reg.i_maxHdonors
+ 5
+#>i RHO_1u19_reg.i_maxLigSize
+ 500
+#>i RHO_1u19_reg.i_maxNO
+ 10
+#>i RHO_1u19_reg.i_maxTorsion
+ 10
+#>i RHO_1u19_reg.i_minLigSize
+ 100
+#>i RHO_1u19_reg.i_mnconf
+ 40
+#>i RHO_1u19_reg.i_mnhighEnergy
+ 9999
+#>i RHO_1u19_reg.i_mnreject
+ 10
+#>i RHO_1u19_reg.i_mnvisits
+ 10
+#>i RHO_1u19_reg.i_ringFlexLevel
+ 2
+#>l RHO_1u19_reg.l_assignCharges
+  yes
+#>l RHO_1u19_reg.l_buildHydrogens
+  yes
+#>l RHO_1u19_reg.l_dbondCisTrans
+  no
+#>l RHO_1u19_reg.l_enhancedBorn
+  no
+#>l RHO_1u19_reg.l_fixOmegas
+  yes
+#>l RHO_1u19_reg.l_internalHB
+  yes
+#>l RHO_1u19_reg.l_membraneScore
+  no
+#>l RHO_1u19_reg.l_neutralAcidsMol
+  no
+#>l RHO_1u19_reg.l_protProt
+  no
+#>l RHO_1u19_reg.l_readyLigand
+  no
+#>l RHO_1u19_reg.l_readyMaps
+  yes
+#>l RHO_1u19_reg.l_readyReceptor
+  yes
+#>l RHO_1u19_reg.l_samplePyramid
+  no
+#>l RHO_1u19_reg.l_sampleRacemic
+  no
+#>l RHO_1u19_reg.l_softLigand
+  yes
+#>l RHO_1u19_reg.l_useBornScore
+  yes
+#>r RHO_1u19_reg.r_DpH
+  2.
+#>r RHO_1u19_reg.r_GRID_maxVw
+  4.
+#>r RHO_1u19_reg.r_ScoreThreshold
+  -32.
+#>r RHO_1u19_reg.r_Score_maxVw
+  1.
+#>r RHO_1u19_reg.r_densityWeight
+  0.
+#>r RHO_1u19_reg.r_dockScanVersion
+  4.6
+#>r RHO_1u19_reg.r_maxFFen
+  500.
+#>r RHO_1u19_reg.r_maxLogP
+  5.
+#>r RHO_1u19_reg.r_maxPk
+  5.
+#>r RHO_1u19_reg.r_mcShake
+  4.
+#>r RHO_1u19_reg.r_mfScoreThreshold
+  999.
+#>r RHO_1u19_reg.r_minLogP
+  0.
+#>r RHO_1u19_reg.r_minPk
+  0.
+#>r RHO_1u19_reg.r_pH
+  7.
+#>r RHO_1u19_reg.r_plRsMiss
+  0.
+#>r RHO_1u19_reg.r_temperature
+  1000.
+#>r RHO_1u19_reg.r_thRstrnt
+  -1.
+#>r RHO_1u19_reg.r_thTautomer
+  -1.
+#>r RHO_1u19_reg.r_vicinity
+  2.
+#>s RHO_1u19_reg.s_bindPatchRes
+a_RHO_1u19_reg_rec.2/*|a_RHO_1u19_reg_rec.a/^T94,^E113:^G114,^A117:^T118,^G121:^E122,^L125,^C167,^Y178,^E181,^S186:^I189,^Y191,^M207:^F208,^H211:^F212,^L216,^F261,^W265,^Y268:^A269,^A272,^A292:^F293,^A295:^K296
+#>s RHO_1u19_reg.s_chargeGroups
+none
+#>s RHO_1u19_reg.s_clrLig
+default
+#>s RHO_1u19_reg.s_clrRec
+grey
+#>s RHO_1u19_reg.s_clrSite
+default pink
+#>s RHO_1u19_reg.s_covModResAt
+none
+#>s RHO_1u19_reg.s_covRxn
+none
+#>s RHO_1u19_reg.s_dbFile
+NOTSET
+#>s RHO_1u19_reg.s_dbIndex
+NOTSET
+#>s RHO_1u19_reg.s_dbType
+mol 2D
+#>s RHO_1u19_reg.s_dspLig
+xstick
+#>s RHO_1u19_reg.s_dspRec
+wire
+#>s RHO_1u19_reg.s_dspSite
+xstick
+#>s RHO_1u19_reg.s_grid4DFlex
+none
+#>s RHO_1u19_reg.s_ligMol
+3:3
+#>s RHO_1u19_reg.s_ligName
+deflig
+#>s RHO_1u19_reg.s_optSC
+a_none
+#>s RHO_1u19_reg.s_recExplicitObj
+none
+#>s RHO_1u19_reg.s_recMol
+1:2
+#>s RHO_1u19_reg.s_recName
+RHO_1u19_reg_rec
+#>s RHO_1u19_reg.s_selLig
+a_*.*//*
+#>s RHO_1u19_reg.s_selRec
+a_*.*//*
+#>s RHO_1u19_reg.s_selSite
+a_*.*//!M5
+#>s RHO_1u19_reg.s_templateMatch
+substructure
+#>s RHO_1u19_reg.s_templateObj
+none
+#>s RHO_1u19_reg.s_xrObj
+none
